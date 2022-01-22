@@ -1,0 +1,61 @@
+<template>
+    <lightning-card title="Imóveis"  icon-name="standard:agent_home">
+        <div class="slds-grid slds-wrap">
+            <div class="slds-col slds-size_1-of-4 input-name">
+                <label>Nome do empreendimento</label>
+            </div>
+            <div class="slds-col slds-size_1-of-2">
+                <lightning-input name="txtnome" value={nomeImovel} onchange={handleNomeChange}></lightning-input> 
+            </div>
+        </div>
+        <div class="slds-grid slds-wrap">
+            <div class="slds-col slds-size_1-of-4 input-name">
+                <label>Metragem</label>
+            </div>
+            <div class="slds-col slds-size_1-of-2">
+                <lightning-input name="txtnome" value={metragem} onchange={handleMetragemChange}></lightning-input> 
+            </div>
+        </div>
+        <div class="slds-grid slds-wrap">
+            <div class="slds-col slds-size_1-of-4 input-name">
+                <label>Status</label>
+            </div>
+            <div class="slds-col slds-size_1-of-2">
+                <lightning-input name="txtnome" value={status} onchange={handleStatusChange}></lightning-input> 
+               
+            </div>
+        </div>
+        <div class="slds-grid slds-wrap">
+            <div class="slds-col slds-size_1-of-4 input-name">
+                <label>Possui Sacada?:</label>
+            </div>
+            <div class="slds-col slds-size_1-of-2">
+                <lightning-input name="PossuiSacada" checked={PossuiSacada} id="checkStatus" onclick={onClickButtonSacada} type="checkbox-button"></lightning-input> 
+            </div>
+        </div>
+        <div class="slds-grid slds-wrap">
+            <div class="slds-col slds-size_1-of-4 input-name">
+                <label>Quatidade de vagas:</label>
+            </div>
+            <div class="slds-col slds-size_1-of-2">
+                <lightning-input name="txtnome" value={vagas} onchange={handleVagasChange}></lightning-input> 
+            </div> 
+        </div>
+        <div class="slds-grid slds-wrap">
+            <div class="slds-col slds-size_1-of-4 input-name">
+                <label>Valor:</label>
+            </div>
+            <div class="slds-col slds-size_1-of-2">
+                <lightning-input name="txtnome" value={valor} onchange={handleValorChange}></lightning-input> 
+            </div>
+        </div>
+        
+       
+        <p slot="footer" class="footer">
+            <!-- <button class="btn-cancelar">Cancelar</button> -->
+            <lightning-button label="Cancelar"  class="botao-cancelar" onclick={onClickButtonCancelar}></lightning-button>
+            <lightning-button label="Salvar" variant="brand" onclick={onClickButtonSalvar}></lightning-button>
+        </p>
+    </lightning-card>
+</template>
+
